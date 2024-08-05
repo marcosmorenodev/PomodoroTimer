@@ -5,6 +5,7 @@ You can get it here: https://marketplace.visualstudio.com/items?itemName=ritwick
 The main app is in charge of the timer functions, DOM manipulation and keeping track of the done sessions as well as the current sessions done so far.
 -A brief note about sessions: A "session" is done once the "active mode" are done. Basically, the span of time in which the user should focus on their task.
 Once these minutes are done, the "break mode" will be triggered, which lets the user take a break from their task. And once 4 sessions have been finished, the "long break mode" will be triggered, which lets the user take a longer break. When this mode ends, it will reset the cycle of sessions back to 0 and will add 1 to the "done sessions" counter.
+
 -By making a deep copy of the "definitive" settings in the global scope, allows the program to mutate the values only in the timer's scope. Thus, making pausing and resuming feasible.
 
 The settings script is in charge of customize the timer's settings (active minutes, break minutes, long break minutes and the app's theme). Once the changes are made, an object called "userSettings" will be stored in localStorage for the app's usage.
